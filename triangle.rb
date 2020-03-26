@@ -15,6 +15,14 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+  if a<=0 || b <=0 || c<=0
+    raise TriangleError.new("Sides are zero or negative")
+  end
+
+  if a+b <=c || b+c <=a || a+c <= b
+    raise TriangleError.new("Two sides cannot be longer than third")
+  end
+  
   if a == b && b == c && a==c
     return :equilateral
   elsif a==b || b == c || a == c
