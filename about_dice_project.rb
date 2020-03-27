@@ -10,7 +10,7 @@ class DiceSet
   def roll(value)
     @values = []
     for val in 1..value
-      @values << rand(value + 1)
+      @values << rand(value) + 1
     end
   end
   def values
